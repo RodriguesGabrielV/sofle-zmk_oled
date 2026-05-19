@@ -28,17 +28,17 @@
     };
 
     macros {
-        mycopy: mycopy {
+        myCopy: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
-            label = "MYCOPY";
+            bindings = <&kp LCTRL &kp C>;
+            label = "NEW_MACRO";
         };
 
-        mypaste: mypaste {
+        myPaste: myPaste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LCTRL &kp V>;
             label = "MYPASTE";
         };
     };
@@ -103,7 +103,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans    &trans     &trans   &trans
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &mycopy       &mypaste      &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
+&trans      &kp K_UNDO    &kp K_CUT     &myCopy       &myPaste      &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
